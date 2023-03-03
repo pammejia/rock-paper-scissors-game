@@ -1,0 +1,156 @@
+<<<<<<< HEAD
+import random
+
+options = ("piedra", "papel", "tijera")
+pc_win = 0
+user_win = 0
+
+round = 1
+
+print("Bienvenido a piedra, papel o tijera!")
+
+while True:
+
+    print("=" * 15)
+    print("RONDA #", round)
+    print("=" * 15)
+    
+    print("=" * 15)
+    print("MARCADOR RONDA #", round)
+    print("Usuario", user_win, "victorias")
+    print("PC", pc_win, "victorias")
+    print("=" * 15)
+
+    user_option = input('piedra, papel o tijera => ')
+    user_option = (user_option.lower())
+    pc_option= (random.choice(options))
+    print("Elegiste = " , user_option)
+    print("La PC Eligio = " , pc_option)
+    
+    if user_option == "tijeras" :
+            print ("Escribe 'tijera' en singular")
+    if not user_option in options :
+        print ("Esta opción no es valida")
+        continue
+    if user_option == pc_option:
+        print('Empate!')
+    elif user_option == 'piedra':
+        if pc_option == 'tijera':
+            print('piedra gana a tijera')
+            print('Usuario gano!')
+            user_win += 1
+        else:
+            print('Papel gana a piedra')
+            print('PC gano!')
+            pc_win += 1
+            
+    elif user_option == 'papel':
+        if pc_option == 'piedra':
+            print('papel gana a piedra')
+            print('Usuario gano!')
+            user_win += 1
+        else:
+            print('tijera gana a papel')
+            print('PC gano!')
+            pc_win += 1
+            
+    elif user_option == 'tijera':
+        if pc_option == 'papel':
+            print('tijera gana a papel')
+            print('Usuario gano!')
+            user_win += 1
+        else:
+            print('piedra gana a tijera')
+            print('PC gano!')
+            pc_win += 1
+           
+    round += 1    
+    
+    if pc_win == 2:
+        print("Usted ganó!")
+        break
+            
+    if user_win == 2:
+        print("La PC ha ganado!")
+        break
+        
+   
+=======
+import random
+
+options = ("piedra", "papel", "tijera")
+pc_win = 0
+user_win = 0
+
+round = 1
+
+print("Bienvenido a piedra, papel o tijera!")
+
+while True:
+
+    print("=" * 15)
+    print("RONDA #", round)
+    print("=" * 15)
+    
+    print("=" * 15)
+    print("MARCADOR RONDA #", round)
+    print("Usuario", user_win, "victorias")
+    print("PC", pc_win, "victorias")
+    print("=" * 15)
+
+    user_option = input('piedra, papel o tijera => ')
+    user_option = (user_option.lower())
+    pc_option= (random.choice(options))
+    print("Elegiste = " , user_option)
+    print("La PC Eligio = " , pc_option)
+    
+    if user_option == "tijeras" :
+            print ("Escribe 'tijera' en singular")
+    if not user_option in options :
+        print ("Esta opción no es valida")
+        continue
+    if user_option == pc_option:
+        print('Empate!')
+    elif user_option == 'piedra':
+        if pc_option == 'tijera':
+            print('piedra gana a tijera')
+            print('Usuario gano!')
+            user_win += 1
+        else:
+            print('Papel gana a piedra')
+            print('PC gano!')
+            pc_win += 1
+            
+    elif user_option == 'papel':
+        if pc_option == 'piedra':
+            print('papel gana a piedra')
+            print('Usuario gano!')
+            user_win += 1
+        else:
+            print('tijera gana a papel')
+            print('PC gano!')
+            pc_win += 1
+            
+    elif user_option == 'tijera':
+        if pc_option == 'papel':
+            print('tijera gana a papel')
+            print('Usuario gano!')
+            user_win += 1
+        else:
+            print('piedra gana a tijera')
+            print('PC gano!')
+            pc_win += 1
+           
+    round += 1    
+    
+    if pc_win == 2:
+        print("Usted ganó!")
+        break
+            
+    if user_win == 2:
+        print("La PC ha ganado!")
+        break
+        
+   
+>>>>>>> a1833057773ad009ed2248cfb27bc4e8b17a8363
+    
